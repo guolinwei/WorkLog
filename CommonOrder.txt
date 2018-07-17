@@ -1,0 +1,3 @@
+WIFI
+U:CMI-Guest
+Pass:Cmi2020
