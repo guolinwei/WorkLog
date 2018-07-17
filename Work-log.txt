@@ -22,7 +22,7 @@
 	  自服务平台主要由从中国移动购买资源的最终用户使用，根据其具体业务调配归属于自己的各种资源。
 	  OP、CLM、自服务平台统称EPC
 	  2、苏研产品软件架构
-	  苏研的软件产品主要分为BCEC、CLM（CLoudMaster）、EBS、Onest、Vn五部分
+	  苏研的软件产品主要分为BCEC、CLM（CLoudMaster）、EBS、Onest、Vn、SDS六部分
 	  BCEC对应OpenStack-Nova服务，虚拟机管理
 	  EBS对应OpenStack-Cinder服务，块存储管理，虚拟机存储管理（虚拟机的硬盘）
 	  Onest对应OpenStack-Swift服务，对象存储（云存储），类似网盘、云盘功能
