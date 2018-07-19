@@ -38,3 +38,5 @@
 日志:（1）虚拟机桥接网卡，在虚拟机中分配不到IP，尝试修改了一下设置->网络->高级>控制芯片的设置，然后虚拟机分配到了。
      （2）虚拟机第二块网卡使用的host-only模式，在虚拟机无其配置文件，使用 IP addr 命令获取MAC地址，nmcli con show 获取uuid，然后将eth0的配置文件复制一个为eth1
 	      路径centos是/etc/sysconfig/network-scripts/ifcfg-eth*,注意里面的MAC地址和UUID配置对了，不要写错，还有device和name也不要写错。如果配置静态IP，记得关掉BOOTPROTO=DHCP选项
+4、时间：2018.7.18
+日志:任何割接都要把割接之前的状态进行记录，统一测试用例，与割接后状态进行比对。

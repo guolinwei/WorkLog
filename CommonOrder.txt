@@ -1,3 +1,6 @@
-WIFI
+WIFI（cmhk-guest）
 U:CMI-Guest
-Pass:Cmi2020
+PWD:Cmi2020
+阿里云培训
+U:linwei.guo@1913015374224326
+PWD:victory80
