@@ -61,6 +61,35 @@
 	 登录10.250.54.40:8080，查看控制器 应用管理和控制器信息 页面
 	(6)、查看EPC页面状态
 	登录https://10.0.6.10:30104、https://10.0.6.10:30103、https://10.0.6.10:30102界面，每个链接都点点看是否有异常。
+7、时间：2018.8.3
+日志：解决马泽亚提出负载均衡无法生效的问题
+   (1)、可以使用telnet IP 端口 测试端口是否打开
+   (2)、firewall-cmd --state 查看firewall是否运行
+        systemctl stop firewalld.service 关闭firewall  	
+   (2)、yum install httpd   安装httpd
+        service httpd start 启动httpd
+		service httpd stop  停止httpd
+		其默认网站路径，/var/www/html/     
+		默认80端口
+   (3)、yum install tomcat  安装tomcat
+        yum install tomcat-webapps tomcat-admin-webapps 安装管理界面，只有装了这个才可以看到默认那个页面
+        默认网站路径/usr/share/tomcat/webapps
+        /usr/share/tomcat/conf/server.xml可修改端口号，路径等
+   (4)、通过这个问题，在没有思路的情况下，先把客户的问题走几遍，熟悉业务流程，通过走几遍流程，通过求同法、求异法，发现一些蛛丝马迹，大胆假设，得出一些设想，
+        再通过实验验证这些设想是否导致问题的发生。
+  （5）、在接触新东西的时候，可以先熟悉流程入手，看看一件事都经过了哪些步骤，哪些人。
+
+8、时间：2018.8.1
+日志：上周五香港IT部门找到了3389端口无法访问的原因，他们的ddos检测将3389流量识别为可疑流量。
+      通过解决该问题学到了telnet Ip 端口，可以检查端口是否起了。
+	  通过这个问题，回忆了tcp三次握手的过程，排查问题的思路，思路是从抓包看数据流如何抵达双方的。
+	  
+
+
+
+
+	  
+         
 
 
 

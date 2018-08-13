@@ -3,6 +3,10 @@ U:CMI-Guest
 PWD:Cmi2020
 WIFI（CMHK internet）
 PWD:Cm34wert
+WIFI（CMHK Guest）
+User:guest
+PWD:cm29458888
+
 
 阿里云培训
 U:linwei.guo@1913015374224326
@@ -12,3 +16,7 @@ PWD:victory80
 U:linwei.guo
 PWD:Victory80
 OA:http//oa.zznode.com
+
+http://hra.zznode.com/hr/;jsessionid=B6723415A1D0584F4759587FE6622FAD
+U:linwei.guo
+PWD:Qq12345678
