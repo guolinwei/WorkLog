@@ -20,3 +20,8 @@ OA:http//oa.zznode.com
 http://hra.zznode.com/hr/;jsessionid=B6723415A1D0584F4759587FE6622FAD
 U:linwei.guo
 PWD:Qq12345678
+
+redmine
+http://111.200.217.68:11077/redmine/my/page
+U:linwei.guo
+PWD:Victory80
