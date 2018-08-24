@@ -47,7 +47,7 @@
     (1)、ping服务器
 	 登录10.250.54.10、10.250.54.14、10.250.54.21、10.250.54.24，执行/root/pingall.sh
 	 其中14是EC的服务器，21是EBS的服务器，24是Onest服务器，服务器密码是Bcec@2017
-	(2)、登录ashboard界面
+	(2)、登录dashboard界面
 	 10.250.54.100/dashboard
      查看主机集合、虚拟机管理两个页面，看是否有异常
 	(3)、执行nova list命令
@@ -83,6 +83,39 @@
 日志：上周五香港IT部门找到了3389端口无法访问的原因，他们的ddos检测将3389流量识别为可疑流量。
       通过解决该问题学到了telnet Ip 端口，可以检查端口是否起了。
 	  通过这个问题，回忆了tcp三次握手的过程，排查问题的思路，思路是从抓包看数据流如何抵达双方的。
+9、时间:2018.8.16
+日志：马泽亚提出有虚拟机既要访问公网，也要访问私网
+ david，私网无法访问的原因，初步定为是绑定了两块网卡，在虚拟机的路由表都生成为默认路由，导致要么公网通，要么是私网通，
+我下午用测试账号做了一个测试，对于这个问题，要做如下操作
+   (1)、解绑绑定的弹性IP；
+   (2)、解绑网卡；
+   (3)、重新绑定虚拟机网卡，先绑定上公网的网卡，再绑定去IT私网的网卡；
+   (4)、将去IT私网的路由写入虚拟机路由表，命令如下
+         route add -net 10.0.7.0/24 gw 172.16.0.1
+         route add -net 172.16.0.0/24 gw 172.16.0.1
+   
+   (5)、上面的命令服务器重启会失效，可以将此路由写入到/etc/sysconfig/static-routes文件中，然后如果服务器重启，执行service network restart将路由信息写入路由表
+10、时间：2018.8.24
+日志：centos配置DNS /etc/resolv.conf   增加nameserver 8.8.8.8
+11、时间：2018.8.24
+日志：安装python3.0 可参考这个链接https://www.cnblogs.com/FZfangzheng/p/7588944.html 或 https://www.cnblogs.com/Mr-wangxd/p/7028285.html
+   (1)、安装依赖包
+   (2)、wget 下载python源码
+   (3)、tar -xvjf 解压源码
+   (4)、./configure
+   (5)、make
+   (6)、make install 
+   (7)、创建软链接(类似windows下的快捷方式)
+        ln -s /usr/local/python3/bin/python3 /usr/bin/python3
+        ln -s /usr/local/python3/bin/pip3 /usr/bin/pip3   
+12、时间：2018.8.24 
+日志：安装python3后，yum会报错，会提示  “File "/usr/bin/yum", line 30 except KeyboardInterrupt, e:
+                                   ^SyntaxError: invalid syntax”
+								   是因为yum用2.7版本写的，兼容性有问题，
+      将/usr/bin/yum 中 #!/usr/bin/python改为 #!/usr/bin/python2.7
+       如果报 /usr/libexec/urlgrabber-ext-down 同理
+
+
 	  
 
 
