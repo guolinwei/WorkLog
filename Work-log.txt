@@ -113,7 +113,7 @@
                                    ^SyntaxError: invalid syntax”
 								   是因为yum用2.7版本写的，兼容性有问题，
       将/usr/bin/yum 中 #!/usr/bin/python改为 #!/usr/bin/python2.7
-       如果报 /usr/libexec/urlgrabber-ext-down 同理 
+       如果报 /usr/libexec/urlgrabber-ext-down 同理  zenjia
 
 
 	  
