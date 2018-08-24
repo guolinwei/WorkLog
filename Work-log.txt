@@ -114,7 +114,10 @@
 								   是因为yum用2.7版本写的，兼容性有问题，
       将/usr/bin/yum 中 #!/usr/bin/python改为 #!/usr/bin/python2.7
        如果报 /usr/libexec/urlgrabber-ext-down 同理  zenjia
-
+13、时间:2018.8.24
+日志:
+    1、第一次拉远程仓库使用git clone
+    2、后续使用git pull 从远程库拉取更新
 
 	  
 
