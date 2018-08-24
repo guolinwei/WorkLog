@@ -118,6 +118,10 @@
 日志:
     1、第一次拉远程仓库使用git clone
     2、后续使用git pull 从远程库拉取更新
+	一般git的流程
+	1、git add 文件名 //将修改从工作区提交到暂存区，撤回需要checkout
+	2、git commit -m "修改说明"//将修改从暂存区提交到版本库
+	3、git push//从本地版本库提交到远程github版本库
 
 	  
 
