@@ -51,7 +51,7 @@
 	 10.250.54.100/dashboard
      查看主机集合、虚拟机管理两个页面，看是否有异常
 	(3)、执行nova list命令
-	登录10.250.54.10，然后执行/root/admin-openrc.sh 然后执行nova service-list
+	登录10.250.54.10，然后执行. /root/admin-openrc.sh 然后执行nova service-list
 	查看state是否均为up
 	(4)、登录界面查看EBS和Onest状态
 	 10.250.54.21:6680
