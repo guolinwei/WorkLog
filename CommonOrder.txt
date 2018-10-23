@@ -15,9 +15,10 @@ PWD:victory80
 公司邮箱:mail.zznode.com
 U:linwei.guo
 PWD:Victory80
-OA:http//oa.zznode.com
+
 
 http://hra.zznode.com/hr/;jsessionid=B6723415A1D0584F4759587FE6622FAD
+OA:http//oa.zznode.com
 U:linwei.guo
 PWD:Qq12345678
 
@@ -25,3 +26,26 @@ redmine
 http://111.200.217.68:11077/redmine/my/page
 U:linwei.guo
 PWD:Victory80
+
+
+
+http://10.250.54.21:6680/bcsds/#/main/dashboard/hardware     ebs 
+http://10.250.54.24:6680/bcsds/#/main/dashboard/hardware     onest
+admin/admin
+
+http://10.250.54.100/dashboard/admin/hypervisors/            dashboard
+
+admin/57c1ee12f8bfef3ea2bc
+
+http://10.250.54.40:8080/sdn/ui/app/index#controllerInfo-c&controllerInfo    sdn
+admin/h3c.com20171218
+
+
+
+
+Nsf0cus@123
+
+https://ecloud-objs.hk.chinamobile.com:443/test99999/testmy1%20%281%29.pem?AWSAccessKeyId=BIFUVDWB9IBZPBEYHOKY&Expires=1531292151&Signature=5uVEo7%2B8%2FrExWsRiCmFrcrt6eAc%3D
+
+
+

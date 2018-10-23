@@ -122,6 +122,18 @@
 	1、git add 文件名 //将修改从工作区提交到暂存区，撤回需要checkout
 	2、git commit -m "修改说明"//将修改从暂存区提交到版本库
 	3、git push//从本地版本库提交到远程github版本库
+14、时间：2018.10.3
+日志：查询bgp路由条数
+    1、使用crt登录10.250.54.3
+	2、stelnet 192.168.239.225 U：huawei p:BCzq@2017!
+	3、执行display bgp routing-table命令 
+	   结果中的Total Number of Routes : **** (2018-10-03的数字是720209)是记录条数
+15、时间：2018.10.23
+日志：
+    1、如何登录EPC节点，从10.250.54.10(服务器名con08) ssh root@10.0.6.10 P:Bcec@2017
+    2、登录mysql  mysql -uroot -pEpic2wsx@WSX
+	3、常用命令 desc tablename表结构; show create table tablename建表语句;
+	4、glance image-list查看底层的镜像
 
 	  
 
