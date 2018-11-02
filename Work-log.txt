@@ -134,6 +134,14 @@
     2、登录mysql  mysql -uroot -pEpic2wsx@WSX
 	3、常用命令 desc tablename表结构; show create table tablename建表语句;
 	4、glance image-list查看底层的镜像
+16、时间：2018.10.25
+日志：centos7下安装完httpd后，也在/var/www/html/下新建了index.html文件,本地curl localhost可以访问，但远程无法访问
+    1、查看selinux状态
+    2、/etc/httpd/conf/http.conf中#ServerName www.example.com:80 可选
+	3、centos防火墙关闭是 主要是因为这点导致此问题的
+	   systemctl stop firewalld.service
+	   systemctl disable firewalld.service
+	   
 
 	  
 
