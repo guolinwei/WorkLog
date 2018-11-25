@@ -1,4 +1,4 @@
-WIFI（cmhk-guest）
+WIFI（CMI-guest）
 U:CMI-Guest
 PWD:Cmi2020
 WIFI（CMHK internet）
