@@ -158,8 +158,33 @@
 18、用IPMI装系统时，无法连接虚拟光驱，报“虚拟机镜像文件正在使用”，
     查看该服务器的在线用户，发现有一个用户连接始终无法释放，怀疑和这个有关，界面无法把它踢下去，后来讲IPMI恢复出厂设置
 19、某台服务器使用KVM工具无法引导至安装界面，在IPMI界面修改了启动项，改为用光驱启动，后在服务器重启时按F11选择光驱，后进入安装界面
-
-
+20、 SAN默认ipmi地址
+  https://192.168.128.101:8088 上
+  https://192.168.128.102:8088 下
+  默认用户名：admin  
+  默认密码Admin@storage 
+  后统一为Huawei12#$
+  在基本信息里，转服务器的3d图像，选择相应端口可以配置IPMIIP
+21、取cinder volume日志
+(1)分别登录到10.250.54.10、10.250.54.11、10.250.54.12
+(2)cinder volume日志在/var/log/cinder/下
+(3)通过ls -l /var/log/cinder/看到目录下的文件，然后取问题发生时间的日志，或者全取。volume.log或者volume.log+日期.gz的文件
+取qemu的日志：
+登录到10.250.54.10，然后执行
+(1)source admin-openrc.sh
+(2)nova show 75170301-6b0d-4fd4-9536-84d3a280d4a9看到具体的instance信息（OS-EXT-SRV-ATTR:instance_name），所在宿主机（OS-EXT-SRV-ATTR:host）
+(3)登录到宿主机
+(4)取到/var/log/libvirt/qemu/xxxx.log的日志（xxxx为步骤2的instance信息）
+21、苹果蓝牙键盘如果认不到，在控制面板->设备和打印机->添加设备->出来提示后，要选择其他密码，界面会出一串密码(不要使用输入框自己输入密码那个)，然后迅速输入界面的数字然后enter回车
+22、问题：vmware建的虚拟机使用桥接模式、NAT模式都上不了外网
+    时间：2018-12-9
+	解决：怀疑是vmwar和之前安装的virtualbox冲突，在网上搜了以后按这个链接的操作https://jingyan.baidu.com/article/11c17a2ccb50c6f446e39dda.html后恢复
+	      点击vmware的"编辑"->"虚拟网络编辑器"，将vmware的桥接网卡重新与物理网卡关联
+		  
+23、vmware 14密钥FF31K-AHZD1-H8ETZ-8WWEZ-WUUVA
+24、用pxe第一次装系统时，报tftp open timeout,结果发现是cobbler服务器的防火墙拦了，所以要把iptables selinux firewalld都停掉
+    systemctl stop firewalld.service
+    systemctl stop iptables
 
 
 
