@@ -185,7 +185,7 @@
 24、用pxe第一次装系统时，报tftp open timeout,结果发现是cobbler服务器的防火墙拦了，所以要把iptables selinux firewalld都停掉
     systemctl stop firewalld.service
     systemctl stop iptables
-25、
+25、test2019-0115
 
 
 
