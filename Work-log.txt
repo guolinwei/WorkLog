@@ -187,3 +187,4 @@
     systemctl stop iptables
 25、test2019-0115
 26/
+27
